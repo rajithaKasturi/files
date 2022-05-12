@@ -1,0 +1,113 @@
+$ cd test
+bash: cd: test: No such file or directory
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git
+$ mkdir test
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git
+$ cd test
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test
+$ git init
+Initialized empty Git repository in C:/Users/hp/git/test/.git/
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        firstfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git add *.*
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   firstfile.txt
+
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git commit -m "first commit "
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'hp@DESKTOP-7AQ5SHG.(none)')
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git config --global user.email "rajitha.inboxme@gmail.com"
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git config --global user.name "rajithaKasturi"
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git commit -m "first commit "
+[master (root-commit) 15c95d3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 firstfile.txt
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git remote add orgin https://github.com/rajithaKasturi/myfirstproject.git
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git push orgin mater
+error: src refspec mater does not match any
+error: failed to push some refs to 'https://github.com/rajithaKasturi/myfirstproject.git'
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git remote add origin https://github.com/rajithaKasturi/myfirstproject.git
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 233 bytes | 233.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/rajithaKasturi/myfirstproject/pull/new/master
+remote:
+To https://github.com/rajithaKasturi/myfirstproject.git
+ * [new branch]      master -> master
+
+hp@DESKTOP-7AQ5SHG MINGW64 ~/git/test (master)
+$
